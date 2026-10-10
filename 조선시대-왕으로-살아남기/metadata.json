@@ -1,0 +1,6 @@
+{
+  "name": "조선시대 왕으로 살아남기",
+  "description": "세자 시절부터 시작하여 성군, 패왕, 개혁군주를 넘나들며 민심과 충성도를 다스리고 살아남는 조선 왕실 시뮬레이션 게임",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

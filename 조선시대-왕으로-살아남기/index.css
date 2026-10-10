@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .font-myeongjo {
+    font-family: 'Nanum Myeongjo', 'Gowun Batang', serif;
+  }
+
+  .font-batang {
+    font-family: 'Gowun Batang', 'Nanum Myeongjo', serif;
+  }
+}
+
+/* Custom animations and parchment texture */
+.bg-hanji {
+  background-color: #fbf8ee;
+  background-image: radial-gradient(#d6cbaf 0.75px, transparent 0.75px), radial-gradient(#d6cbaf 0.75px, #fbf8ee 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.bg-dark-palace {
+  background: radial-gradient(circle at 50% 20%, #1f1b24 0%, #0d0b10 100%);
+}
+
+.bg-royal-pattern {
+  background-color: #17131b;
+  background-image: 
+    radial-gradient(circle at 25px 25px, rgba(217, 119, 6, 0.07) 2%, transparent 0%),
+    radial-gradient(circle at 75px 75px, rgba(217, 119, 6, 0.07) 2%, transparent 0%);
+  background-size: 100px 100px;
+}
+
+/* Red Royal Seal Stamp Animation */
+@keyframes stampIn {
+  0% {
+    transform: scale(3) rotate(-15deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(0.9) rotate(-3deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-5deg);
+    opacity: 0.95;
+  }
+}
+
+.animate-stamp {
+  animation: stampIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Glow Pulse */
+@keyframes royalPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(234, 179, 8, 0.3), inset 0 0 15px rgba(234, 179, 8, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(234, 179, 8, 0.6), inset 0 0 25px rgba(234, 179, 8, 0.4);
+  }
+}
+
+.animate-royal-glow {
+  animation: royalPulse 3s infinite ease-in-out;
+}
